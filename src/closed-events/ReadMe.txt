@@ -7,6 +7,8 @@ key concepts for that category, and fundamental concepts for that programming la
 Although this might not seem "legal"; it is. You can take notes from previous tests to bring them with you, and you can bring any
 notes about the concepts of that programming language. You can usually bring physical notes.
 
+================================================== FREQUENT ASKED QUESTIONS (FAQs) ==================================================
+
 ================================================== INFORMATION ABOUT USAGE OF THE CONTENT ==================================================
 
 Simply read, view or copy the files you need. The subfolders of are the programming languages, such as Python and Java for example, which more might be added. The open events that are 

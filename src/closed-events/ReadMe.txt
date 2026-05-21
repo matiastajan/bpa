@@ -9,6 +9,10 @@ notes about the concepts of that programming language. You can usually bring phy
 
 ================================================== FREQUENT ASKED QUESTIONS (FAQs) ==================================================
 
+Is this legal? Why and how?
+
+
+
 ================================================== INFORMATION ABOUT USAGE OF THE CONTENT ==================================================
 
 Simply read, view or copy the files you need. The subfolders of are the programming languages, such as Python and Java for example, which more might be added. The open events that are 

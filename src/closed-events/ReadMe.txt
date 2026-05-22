@@ -9,7 +9,13 @@ notes about the concepts of that programming language. You can usually bring phy
 
 ================================================== FREQUENT ASKED QUESTIONS (FAQs) ==================================================
 
-Is this legal? Why and how?
+Is this legal? Why and how? 
+
+In short, yes, this is legal. The PDF is created to be intended to be printed on paper (as written above), as you're able to bring physical
+notes but not electronically. As it's stated in the BPA official guidelines for the 355 Python Programming event (which should apply most
+information to similar events): "Contestant must supply publish and/or unpublish non-electronic written reference materials" and the NOT 
+allowed materials are: "No equipment, supplies, or materials other than those specified for the event will be allowed in the testing area" 
+(https://members.bpa.org/mdocs-posts/355-python-programming/).
 
 
 

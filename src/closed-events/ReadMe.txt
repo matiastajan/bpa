@@ -7,7 +7,7 @@ key concepts for that category, and fundamental concepts for that programming la
 Although this might not seem "legal"; it is. You can take notes from previous tests to bring them with you, and you can bring any
 notes about the concepts of that programming language. You can usually bring physical notes.
 
-================================================== FREQUENT ASKED QUESTIONS (FAQs) ==================================================
+================================================== COMMON QUESTIONS ==================================================
 
 Is this legal? Why and how? 
 

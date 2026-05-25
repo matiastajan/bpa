@@ -4,7 +4,8 @@ In this folder, you will find useful notes for either the Python Programming (35
 for Business Profesionals of America (BPA). These notes are mainly from previous Regional, State, or National tests that contain 
 key concepts for that category, and fundamental concepts for that programming language.
 
-
+This folder also contains PDFs for (currently) Python and Java. The way this is meant to be used are that you print them in paper and use
+them as a refrence during your Java Programming or Python Programming events.
 
 ================================================== COMMON QUESTIONS ==================================================
 

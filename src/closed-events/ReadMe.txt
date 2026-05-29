@@ -1,8 +1,9 @@
 ================================================== ABOUT CONTENT ==================================================
 
 In this folder, you will find useful PDF notes for either the Python Programming (355) closed event or the Java Programming (340) closed event
-for Business Profesionals of America (BPA). These PDF notes are mainly from previous Regional, State, or National tests that contain 
-key concepts for that category, and fundamental concepts for that programming language.
+for Business Profesionals of America (BPA). These PDF notes are mainly from previous Regional, State, or National tests that evaluate knowledge 
+of working with structured designs, algorithms, and O.O.P. methodology concepts all for you to use to sustain you during your 300's closed
+event.
 
 This folder also contains PDFs for (currently) Python and Java. The way this is meant to be used are that you print them in paper and use
 them as a refrence during your Java Programming or Python Programming events.

@@ -1,82 +1,103 @@
-import time as t
-from questions import easy_q # Computer Programming Concepts, Information Technology Concepts
+from time import sleep 
+from opens import easy_q # Computer Programming Concepts, Information Technology Concepts
 
 difficulties = ["easy", "medium", "hard"]
-modes = ["normal", "expert"]
+
+opens = {
+    1: "computer programming concepts",
+    2: "information technology concepts"
+}
+
+modes = {
+    "a": "practice mode",
+    "b": "simulation mode"
+}
 
 def normal_result():
     print("You got " + str(score) + " questions correct!")
     print("You got " + str((score / total_questions) * 100) + "%")
-    t.sleep(3)
+    sleep(3)
     print("Goodbye!")
     quit()
 
 def expert_result():
     print(f"You got {score} questions correct! ({str((score / total_questions) * 100)}%)")
-    t.sleep(2)
+    sleep(2)
     print("Goobye!")
     quit()
+
+def get_open():
+    pass
+
+def get_difficulty():
+    while True:
+        difficulty = input("Type the difficulty of your quiz Easy/Medium/Hard: ").lower()
+        if difficulty in difficulties:
+            sleep(1)
+            break
+        else:
+            print("Not a valid difficulty.")
+            sleep(6.7)
+
+    return difficulty
+
+def get_mode():
+    while True:
+        mode = input('Type "a" for pratice mode, or type "b" for simulation mode (otherwise "?" for more info): ').lower()
+        if mode in modes.keys():
+            print(f"Mode selected: {modes.items.capitalized()}")
+            break
+        elif mode == "?":
+            print("\nPractice Mode: After answering each question, it TELLS you whenever your answer was correct or incorrect at the moment. Prompts ALL (50+) of the questions that open contains.")
+            print("Simulation Mode: After answering each question, it DOESN'T TELL you whenever your answer was correct or incorrect UNTIL the end. Prompts and selects ONLY 50 questions the open contains.\n")
+            sleep(4)
+            continue
+        else:
+            print("Not a valid answer, please try again.")
+            sleep(0.5)
     
-print("Welcome to French Quiz! (Mastered Version)")
-t.sleep(1.5)
+    return mode
 
-playing = input("Do you want to play (Yes/No)? ")
-if playing.lower() != "yes":
-    quit()
+def main():
+    print("Welcome to French Quiz!")
 
-print("Okay, lets begin! :)")
-print()
-t.sleep(1)
+    playing = input("Do you want to play (Yes/No)? ")
+    if playing.lower() != "yes":
+        quit()
 
-# get difficulty
-while True:
-    difficulty = input("Type the difficulty of your quiz Easy/Medium/Hard: ").lower()
-    if difficulty in difficulties:
-        t.sleep(1)
-        break
-    else:
-        print("Not a valid difficulty.")
-        t.sleep(0.5)
+    print("Okay, lets begin! :)")
+    print()
+    sleep(1)
 
-# get mode
-while True:
-    mode = input("Type the mode for your difficulty Normal/Expert or ? for info: ").lower()
-    if mode in modes:
-        break
-    elif mode == "?":
-        print()
-        print("Normal: questions are organiazed by default in a orden & tells you the correct answer.")
-        print("Expert: questions are random & it does not tell you the correct answer.")
-        print()
-        t.sleep(4)
-        continue
-    else:
-        print("Not a valid mode.")
-        t.sleep(0.5)
+    difficulty = get_difficulty()
+    # open = get_open()
+    mode = get_mode()
 
-if difficulty == "easy":
-    total_questions = 6
-    if mode == "normal":
-        score = easy_q.normal_questions()
-        normal_result()
-    else:
-        score = easy_q.random_questions()
-        expert_result()
+    if difficulty == "easy":
+        total_questions = 6
+        if mode == "normal":
+            score = easy_q.normal_questions()
+            normal_result()
+        else:
+            score = easy_q.random_questions()
+            expert_result()
 
-elif difficulty == "medium":
-    total_questions = 8
-    if mode == "normal":
-        # score = medium_q.normal_questions()
-        normal_result()
-    else:
-        # score = medium_q.random_questions()
-        expert_result()
+    elif difficulty == "medium":
+        total_questions = 8
+        if mode == "normal":
+            # score = medium_q.normal_questions()
+            normal_result()
+        else:
+            # score = medium_q.random_questions()
+            expert_result()
 
-elif difficulty == "hard":
-    total_questions = 10
-    if mode == "normal":
-        # score = hard_q.normal_questions()
-        normal_result()
-    else:
-        # score = hard_q.random_questions()
-        expert_result()
+    elif difficulty == "hard":
+        total_questions = 10
+        if mode == "normal":
+            # score = hard_q.normal_questions()
+            normal_result()
+        else:
+            # score = hard_q.random_questions()
+            expert_result()
+
+main()

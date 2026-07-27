@@ -1,6 +1,7 @@
 from time import sleep 
 from opens import easy_q # Computer Programming Concepts, Information Technology Concepts
 
+# Will be replaced by the opens dict
 difficulties = ["easy", "medium", "hard"]
 
 opens = {
@@ -43,9 +44,9 @@ def get_difficulty():
 
 def get_mode():
     while True:
-        mode = input('Type "a" for pratice mode, or type "b" for simulation mode (otherwise "?" for more info): ').lower()
-        if mode in modes.keys():
-            print(f"Mode selected: {modes.items.capitalized()}")
+        mode = input('Enter "a" for Pratice Mode, or enter "b" for Simulation Mode (otherwise enter "?" for more info): ').lower()
+        if mode in modes:
+            print(f"Mode selected: {modes.items}")
             break
         elif mode == "?":
             print("\nPractice Mode: After answering each question, it TELLS you whenever your answer was correct or incorrect at the moment. Prompts ALL (50+) of the questions that open contains.")
@@ -69,7 +70,7 @@ def main():
     print()
     sleep(1)
 
-    difficulty = get_difficulty()
+    difficulty = get_difficulty() # Will get replaced by the get_open() function
     # open = get_open()
     mode = get_mode()
 

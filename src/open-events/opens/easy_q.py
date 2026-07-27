@@ -1,13 +1,14 @@
 # 6/6q normal: done
 # 6/6q expert: done
-import time as t, random
+from time import sleep 
+import random
 score = 0
 questions_remaining = 0
 
 def normal_questions():
     global score, questions_remaining
 
-    t.sleep(1)
+    sleep(1)
     print()
     questions_remaining += 1
     answer = input(f"{questions_remaining}Q: What is 'hello' in French? ")
@@ -17,7 +18,7 @@ def normal_questions():
     else:
         print("Incorrect. It was: Bonjour")
 
-    t.sleep(1)
+    sleep(1)
     print()
     questions_remaining += 1
     answer = input(f"{questions_remaining}Q: What is 'please' in French? ")
@@ -27,7 +28,7 @@ def normal_questions():
     else:
         print("Incorrect. It was: š'il vous plaît")
 
-    t.sleep(1)
+    sleep(1)
     print()
     questions_remaining += 1
     answer = input(f"{questions_remaining}Q: What is 'thanks' in French? ")
@@ -37,7 +38,7 @@ def normal_questions():
     else:
         print("Incorrect. It was: Merci")
 
-    t.sleep(1)
+    sleep(1)
     print()
     questions_remaining += 1
     answer = input(f"{questions_remaining}Q: What is 'you're welcome' in French? ")
@@ -47,7 +48,7 @@ def normal_questions():
     else:
         print("Incorrect. It was: De rein")
 
-    t.sleep(1)
+    sleep(1)
     print()
     questions_remaining += 1
     answer = input(f"{questions_remaining}Q: What is 'sorry' in French? ")
@@ -57,7 +58,7 @@ def normal_questions():
     else:
         print("Incorrect. It was: Pardon")
 
-    t.sleep(1)
+    sleep(1)
     print()
     questions_remaining += 1
     answer = input(f"{questions_remaining}Q: What is 'goodbye' in French? ")
@@ -93,7 +94,7 @@ def random_questions():
         fresh_questions_dict[item[0]] = item[1]
 
     for q, a in fresh_questions_dict.items():
-        t.sleep(1)
+        sleep(1)
         print()
         questions_remaining += 1
         print(f"{questions_remaining}Q:")

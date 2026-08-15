@@ -1,5 +1,3 @@
-# 6/6q normal: done
-# 6/6q expert: done
 from time import sleep 
 import random
 score = 0
@@ -71,8 +69,7 @@ def normal_questions():
     print()
     return score
 
-def random_questions():
-    global score, questions_remaining
+def random_questions(score, questions_remaining):
 
     easy_questions_dict = {
         "What is 'hello' in French? ": "bonjour",

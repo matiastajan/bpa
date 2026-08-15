@@ -1,11 +1,9 @@
-# 6/6q normal: done
-# 6/6q expert: done
 from time import sleep 
 import random
 score = 0
 questions_remaining = 0
 
-def cpc_open_questions():
+def cpc_practice_mode():
     easy_questions_dict = {
         "What is 'hello' in French? ": "bonjour",
         "What is 'please' in French? ": "s'il vous plait",

@@ -60,7 +60,7 @@ if difficulty == "easy":
         score = easy_q.normal_questions()
         normal_result()
     else:
-        score = easy_q.random_questions()
+        score = easy_q.random_questions(0, 0)
         expert_result()
 
 # elif difficulty == "medium":

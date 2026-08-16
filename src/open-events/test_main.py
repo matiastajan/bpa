@@ -57,7 +57,7 @@ while True:
 if difficulty == "easy":
     total_questions = 6
     if mode == "normal":
-        score = easy_q.normal_questions()
+        score = easy_q.normal_questions(0, 0)
         normal_result()
     else:
         score = easy_q.random_questions(0, 0)

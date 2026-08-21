@@ -1,11 +1,7 @@
 from time import sleep 
 import random
-score = 0
-questions_remaining = 0
 
-def normal_questions():
-    global score, questions_remaining
-
+def normal_questions(score, questions_remaining):
     sleep(1)
     print()
     questions_remaining += 1

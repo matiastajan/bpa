@@ -1,9 +1,7 @@
 from time import sleep 
 import random
-score = 0
-questions_remaining = 0
 
-def cpc_practice_mode():
+def cpc_questions_practice_mode(score, questions_remaining):
     easy_questions_dict = {
         "What is 'hello' in French? ": "bonjour",
         "What is 'please' in French? ": "s'il vous plait",

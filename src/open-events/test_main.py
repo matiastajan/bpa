@@ -57,9 +57,11 @@ while True:
 if difficulty == "easy":
     total_questions = 6
     if mode == "normal":
+        sleep(1)
         score = easy_q.normal_questions(0, 0)
         normal_result()
     else:
+        sleep(1)
         score = easy_q.random_questions(0, 0)
         expert_result()
 

@@ -2,67 +2,54 @@ from time import sleep
 import random
 
 def normal_questions(score, questions_remaining):
-    sleep(1)
-    print()
     questions_remaining += 1
-    answer = input(f"{questions_remaining}Q: What is 'hello' in French? ")
+    answer = input(f"\n{questions_remaining}Q: What is 'hello' in French? ")
     if answer.lower() == "bonjour":
         print("Correct!")
         score += 1
     else:
         print("Incorrect. It was: Bonjour")
 
-    sleep(1)
-    print()
     questions_remaining += 1
-    answer = input(f"{questions_remaining}Q: What is 'please' in French? ")
+    answer = input(f"\n{questions_remaining}Q: What is 'please' in French? ")
     if answer.lower() == "s'il vous plait":
         print("Correct!")
         score += 1
     else:
         print("Incorrect. It was: š'il vous plaît")
 
-    sleep(1)
-    print()
     questions_remaining += 1
-    answer = input(f"{questions_remaining}Q: What is 'thanks' in French? ")
+    answer = input(f"\n{questions_remaining}Q: What is 'thanks' in French? ")
     if answer.lower() == "merci":
         print("Correct!")
         score += 1
     else:
         print("Incorrect. It was: Merci")
 
-    sleep(1)
-    print()
     questions_remaining += 1
-    answer = input(f"{questions_remaining}Q: What is 'you're welcome' in French? ")
+    answer = input(f"\n{questions_remaining}Q: What is 'you're welcome' in French? ")
     if answer.lower() == "de rein":
         print("Correct!")
         score += 1
     else:
         print("Incorrect. It was: De rein")
 
-    sleep(1)
-    print()
     questions_remaining += 1
-    answer = input(f"{questions_remaining}Q: What is 'sorry' in French? ")
+    answer = input(f"\n{questions_remaining}Q: What is 'sorry' in French? ")
     if answer.lower() == "pardon":
         print("Correct!")
         score += 1
     else:
         print("Incorrect. It was: Pardon")
 
-    sleep(1)
-    print()
     questions_remaining += 1
-    answer = input(f"{questions_remaining}Q: What is 'goodbye' in French? ")
+    answer = input(f"\n{questions_remaining}Q: What is 'goodbye' in French? ")
     if answer.lower() == "au revoir":
         print("Correct!")
         score += 1
     else:
-        print("Incorrect. It was: Au revoir")
+        print("Incorrect. It was: Au revoir\n")
 
-    print()
     return score
 
 def random_questions(score, questions_remaining):

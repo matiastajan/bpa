@@ -1,8 +1,18 @@
 from time import sleep
 from opens import easy_q # Computer Programming Concepts, Information Technology Concepts
 
-difficulties = ["easy", "medium", "hard"]
-modes = ["normal", "expert"]
+difficulties = ["easy", "medium", "hard"] # Will be replaced by the "opens" dict
+modes = ["normal", "expert"] # Will be replaced by the new modes dict
+
+opens = {
+    1: "computer programming concepts",
+    2: "information technology concepts"
+}
+
+modes = {
+    "a": "practice mode",
+    "b": "simulation mode"
+}
 
 def normal_result():
     print("You got " + str(score) + " questions correct!")

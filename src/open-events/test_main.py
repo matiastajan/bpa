@@ -9,72 +9,77 @@ opens = {
     2: "information technology concepts"
 }
 
-modes = {
-    "a": "practice mode",
-    "b": "simulation mode"
-}
+# modes = {
+#     "a": "practice mode",
+#     "b": "simulation mode"
+# }
 
-def normal_result():
+def normal_result(score, total_questions):
     print("You got " + str(score) + " questions correct!")
     print("You got " + str((score / total_questions) * 100) + "%")
     sleep(3)
     print("Goodbye!")
     quit()
 
-def expert_result():
+def expert_result(score, total_questions):
     print(f"You got {score} questions correct! ({str((score / total_questions) * 100)}%)")
     sleep(2)
     print("Goobye!")
     quit()
-    
-print("Welcome to French Quiz! (Mastered Version)")
-sleep(1.5)
 
-playing = input("Do you want to play (Yes/No)? ")
-if playing.lower() != "yes":
-    quit()
+def get_difficulty():
+    while True:
+        difficulty = input("Type the difficulty of your quiz Easy/Medium/Hard: ").lower()
+        if difficulty in difficulties:
+            sleep(1)
+            break
+        else:
+            print("Not a valid difficulty.")
+            sleep(0.5)
 
-print("Okay, lets begin! :)")
-print()
-sleep(1)
+def get_mode():
+    while True:
+        mode = input("Type the mode for your difficulty Normal/Expert or ? for info: ").lower()
+        if mode in modes:
+            break
+        elif mode == "?":
+            print()
+            print("Normal: questions are organiazed by default in a orden & tells you the correct answer.")
+            print("Expert: questions are random & it does not tell you the correct answer.")
+            print()
+            sleep(4)
+            continue
+        else:
+            print("Not a valid mode.")
+            sleep(0.5)
 
-# get difficulty
-while True:
-    difficulty = input("Type the difficulty of your quiz Easy/Medium/Hard: ").lower()
-    if difficulty in difficulties:
-        sleep(1)
-        break
-    else:
-        print("Not a valid difficulty.")
-        sleep(0.5)
+def main():
+    print("Welcome to French Quiz! (Mastered Version)")
+    sleep(1.5)
 
-# get mode
-while True:
-    mode = input("Type the mode for your difficulty Normal/Expert or ? for info: ").lower()
-    if mode in modes:
-        break
-    elif mode == "?":
-        print()
-        print("Normal: questions are organiazed by default in a orden & tells you the correct answer.")
-        print("Expert: questions are random & it does not tell you the correct answer.")
-        print()
-        sleep(4)
-        continue
-    else:
-        print("Not a valid mode.")
-        sleep(0.5)
+    playing = input("Do you want to play (Yes/No)? ")
+    if playing.lower() != "yes":
+        quit()
 
-if difficulty == "easy":
-    total_questions = 6
-    if mode == "normal":
-        sleep(1)
-        score = easy_q.normal_questions(0, 0)
-        normal_result()
-    else:
-        sleep(1)
-        score = easy_q.random_questions(0, 0)
-        expert_result()
+    print("Okay, lets begin! :)")
+    print()
+    sleep(1)
 
+    difficulty = get_difficulty()
+    mode = get_mode()
+
+    if difficulty == "easy":
+    # total_questions = 6
+        if mode == "normal":
+            sleep(1)
+            score = easy_q.normal_questions(0, 0)
+            normal_result(score, 6)
+        else:
+            sleep(1)
+            score = easy_q.random_questions(0, 0)
+            expert_result(score, 6)
+
+main()
 # elif difficulty == "medium":
 #     total_questions = 8
 #     if mode == "normal":

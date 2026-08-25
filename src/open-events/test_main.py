@@ -37,6 +37,8 @@ def get_difficulty():
             print("Not a valid difficulty.")
             sleep(0.5)
 
+    return difficulty
+
 def get_mode():
     while True:
         mode = input("Type the mode for your difficulty Normal/Expert or ? for info: ").lower()
@@ -53,16 +55,16 @@ def get_mode():
             print("Not a valid mode.")
             sleep(0.5)
 
+    return mode
+
 def main():
     print("Welcome to French Quiz! (Mastered Version)")
-    sleep(1.5)
 
     playing = input("Do you want to play (Yes/No)? ")
     if playing.lower() != "yes":
         quit()
 
-    print("Okay, lets begin! :)")
-    print()
+    print("Okay, lets begin! :)\n")
     sleep(1)
 
     difficulty = get_difficulty()
@@ -80,6 +82,7 @@ def main():
             expert_result(score, 6)
 
 main()
+
 # elif difficulty == "medium":
 #     total_questions = 8
 #     if mode == "normal":

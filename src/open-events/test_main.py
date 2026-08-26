@@ -4,6 +4,12 @@ from opens import easy_q # Computer Programming Concepts, Information Technology
 difficulties = ["easy", "medium", "hard"] # Will be replaced by the "opens" dict
 modes = ["normal", "expert"] # Will be replaced by the new modes dict
 
+difficulties_dict = {
+    1: "easy",
+    2: "medium",
+    3: "hard"
+}
+
 opens = {
     1: "computer programming concepts",
     2: "information technology concepts"
@@ -13,6 +19,11 @@ opens = {
 #     "a": "practice mode",
 #     "b": "simulation mode"
 # }
+
+def loop_difficulties():
+    for key, value in difficulties_dict.items():
+        print(f"{key}: {value.title()}")
+        sleep(0.25)
 
 def normal_result(score, total_questions):
     print("You got " + str(score) + " questions correct!")
@@ -37,6 +48,21 @@ def get_difficulty():
             print("Not a valid difficulty.")
             sleep(0.5)
 
+    return difficulty
+
+def get_difficulty_dict():
+    while True:
+        loop_difficulties()
+        difficulty = input("Type the difficulty # of your quiz: ")
+        if difficulty.isdigit():
+            difficulty = int(difficulty)
+            if difficulty in difficulties_dict:
+                break
+            else:
+                print("Please enter a valid number that corresponds to the difficulty.")
+        else:
+            print("Please enter the difficulty number (#) next time.")
+                       
     return difficulty
 
 def get_mode():
@@ -67,7 +93,8 @@ def main():
     print("Okay, lets begin! :)\n")
     sleep(1)
 
-    difficulty = get_difficulty()
+    # difficulty = get_difficulty()
+    difficulty = get_difficulty_dict()
     mode = get_mode()
 
     if difficulty == "easy":

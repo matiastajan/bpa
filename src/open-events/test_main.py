@@ -17,10 +17,10 @@ opens = {
     2: "information technology concepts"
 }
 
-# modes = {
-#     "a": "practice mode",
-#     "b": "simulation mode"
-# }
+modes_for_opens = {
+    "a": "practice mode",
+    "b": "simulation mode"
+}
 
 def loop_difficulties():
     for key, value in difficulties.items():

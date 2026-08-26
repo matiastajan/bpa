@@ -57,11 +57,13 @@ def get_difficulty_dict():
         if difficulty.isdigit():
             difficulty = int(difficulty)
             if difficulty in difficulties_dict:
+                print(f"Great! Difficulty chosen: {difficulties_dict[difficulty].title()}\n")
+                sleep(1)
                 break
             else:
-                print("Please enter a valid number that corresponds to the difficulty.")
+                print("Please enter a valid number that corresponds to the difficulty.\n")
         else:
-            print("Please enter the difficulty number (#) next time.")
+            print("Please enter the difficulty number (#) next time.\n")
                        
     return difficulty
 

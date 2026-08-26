@@ -1,10 +1,9 @@
 from time import sleep
 from opens import easy_q # Computer Programming Concepts, Information Technology Concepts
 
-difficulties = ["easy", "medium", "hard"] # Will be replaced by the "opens" dict
 modes = ["normal", "expert"] # Will be replaced by the new modes dict
 
-difficulties_dict = {
+difficulties = { # Will be replaced by the "opens" dict
     1: "easy",
     2: "medium",
     3: "hard"
@@ -21,7 +20,7 @@ opens = {
 # }
 
 def loop_difficulties():
-    for key, value in difficulties_dict.items():
+    for key, value in difficulties.items():
         print(f"{key}: {value.title()}")
         sleep(0.25)
 
@@ -40,24 +39,12 @@ def expert_result(score, total_questions):
 
 def get_difficulty():
     while True:
-        difficulty = input("Type the difficulty of your quiz Easy/Medium/Hard: ").lower()
-        if difficulty in difficulties:
-            sleep(1)
-            break
-        else:
-            print("Not a valid difficulty.")
-            sleep(0.5)
-
-    return difficulty
-
-def get_difficulty_dict():
-    while True:
         loop_difficulties()
         difficulty = input("Type the difficulty # of your quiz: ")
         if difficulty.isdigit():
             difficulty = int(difficulty)
-            if difficulty in difficulties_dict:
-                print(f"Great! Difficulty chosen: {difficulties_dict[difficulty].title()}\n")
+            if difficulty in difficulties:
+                print(f"Great! Difficulty chosen: {difficulties[difficulty].title()}\n")
                 sleep(1)
                 break
             else:
@@ -95,8 +82,7 @@ def main():
     print("Okay, lets begin! :)\n")
     sleep(1)
 
-    # difficulty = get_difficulty()
-    difficulty = get_difficulty_dict()
+    difficulty = get_difficulty()
     mode = get_mode()
 
     if difficulty == 1: # Easy

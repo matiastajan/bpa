@@ -1,15 +1,13 @@
 from time import sleep
 from opens import easy_q # Computer Programming Concepts, Information Technology Concepts
 
-modes = ["normal", "expert"] # Will be replaced by the new modes dict
-
 difficulties = { # Will be replaced by the "opens" dict
     1: "easy",
     2: "medium",
     3: "hard"
 }
 
-modes_dict = {
+modes = { # Will be replaced by the new modes dict
     1: "normal",
     2: "expert"
 }
@@ -30,7 +28,7 @@ def loop_difficulties():
         sleep(0.25)
 
 def loop_modes():
-    for key, value in modes_dict.items():
+    for key, value in modes.items():
         print(f"{key}: {value.title()}")
         sleep(0.25)
 
@@ -66,30 +64,12 @@ def get_difficulty():
 
 def get_mode():
     while True:
-        mode = input("Type the mode for your difficulty Normal/Expert or ? for info: ").lower()
-        if mode in modes:
-            break
-        elif mode == "?":
-            print()
-            print("Normal: questions are organiazed by default in a orden & tells you the correct answer.")
-            print("Expert: questions are random & it does not tell you the correct answer.")
-            print()
-            sleep(4)
-            continue
-        else:
-            print("Not a valid mode.")
-            sleep(0.5)
-
-    return mode
-
-def get_mode_dict():
-    while True:
         loop_modes()
         mode = input("Type the mode number (#) for your quiz (or ? for more information): ")
         if mode.isdigit():
             mode = int(mode)
-            if mode in modes_dict:
-                print(f"Terrific! Mode chosen: {modes_dict[mode].title()}\n")
+            if mode in modes:
+                print(f"Terrific! Mode chosen: {modes[mode].title()}\n")
                 sleep(1)
                 break
             else:
@@ -114,8 +94,7 @@ def main():
     sleep(1)
 
     difficulty = get_difficulty()
-    # mode = get_mode()
-    mode = get_mode_dict()
+    mode = get_mode()
 
     if difficulty == 1: # Easy
     # total_questions = 6
@@ -129,21 +108,3 @@ def main():
             expert_result(score, 6)
 
 main()
-
-# elif difficulty == "medium":
-#     total_questions = 8
-#     if mode == "normal":
-#         score = medium_q.normal_questions()
-#         normal_result()
-#     else:
-#         score = medium_q.random_questions()
-#         expert_result()
-
-# elif difficulty == "hard":
-#     total_questions = 10
-#     if mode == "normal":
-#         score = hard_q.normal_questions()
-#         normal_result()
-#     else:
-#         score = hard_q.random_questions()
-#         expert_result()

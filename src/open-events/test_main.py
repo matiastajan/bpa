@@ -99,7 +99,7 @@ def main():
     difficulty = get_difficulty_dict()
     mode = get_mode()
 
-    if difficulty == "easy":
+    if difficulty == 1: # Easy
     # total_questions = 6
         if mode == "normal":
             sleep(1)

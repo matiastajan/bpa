@@ -1,2 +1,2 @@
 # BPA (Business Professionals of America)
-A quick quiz over all of the **Opens**, and PDFs of refrence notes for the Management Information Systems category (only programming-related) **Closed** events for Business Profesionals of America on GitHub.
+A quick terminal-based quiz over of the **Opens**; includes PDFs of notes for the Management Information Systems category for **Closed** events for Business Profesionals of America on GitHub.

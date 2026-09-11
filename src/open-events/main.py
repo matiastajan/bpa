@@ -50,7 +50,7 @@ def get_mode():
             break
         elif mode == "?":
             print("\nPractice Mode: After answering each question, it TELLS you whenever your answer was correct or incorrect at the moment. Prompts ALL (50+) of the questions that open contains.")
-            print("Simulation Mode: After answering each question, it DOESN'T TELL you whenever your answer was correct or incorrect UNTIL the end. Prompts and selects ONLY 50 questions the open contains.\n")
+            print("Simulation Mode: After answering each question, it DOESN'T TELL you whenever your answer was correct or incorrect UNTIL the end. Prompts and randomly selects ONLY 50 questions the open contains.\n")
             sleep(4)
             continue
         else:

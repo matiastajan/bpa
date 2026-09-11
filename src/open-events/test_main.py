@@ -32,17 +32,11 @@ def loop_modes():
         print(f"{key}: {value.title()}")
         sleep(0.25)
 
-def normal_result(score, total_questions):
+def show_result(score, total_questions):
     print("You got " + str(score) + " questions correct!")
     print("You got " + str((score / total_questions) * 100) + "%")
-    sleep(3)
-    print("Goodbye!")
-    quit()
-
-def expert_result(score, total_questions):
-    print(f"You got {score} questions correct! ({str((score / total_questions) * 100)}%)")
     sleep(2)
-    print("Goobye!")
+    print("Goodbye!")
     quit()
 
 def get_difficulty():
@@ -101,10 +95,10 @@ def main():
         if mode == 1:
             sleep(1)
             score = easy_q.normal_questions(0, 0)
-            normal_result(score, 6)
+            show_result(score, 6)
         elif mode == 2:
             sleep(1)
             score = easy_q.random_questions(0, 0)
-            expert_result(score, 6)
+            show_result(score, 6)
 
 main()

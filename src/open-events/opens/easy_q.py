@@ -55,11 +55,11 @@ def normal_questions(score, questions_remaining):
 def random_questions(score, questions_remaining):
 
     easy_questions_dict = {
-        "What is 'hello' in French? ": "bonjour",
-        "What is 'please' in French? ": "s'il vous plait",
+        "What is 'Hello' in French? ": "bonjour",
+        "What is 'please' in French? ": "s'il vous plaît",
         "What is 'thanks' in French? ": "merci",
         "What is 'you're welcome' in French? ": "de rein",
-        "What is 'sorry' in French? ": "pardon",
+        "What is 'sorry' in French (formal)? ": "pardon",
         "What is 'goodbye' in French? ": "au revoir"
     }
 

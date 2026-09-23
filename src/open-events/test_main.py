@@ -27,9 +27,14 @@ def loop_difficulties():
         print(f"{key}: {value.title()}")
         sleep(0.25)
 
+# def loop_modes():
+#     for key, value in modes.items():
+#         print(f"{key}: {value.title()}")
+#         sleep(0.25)
+
 def loop_modes():
-    for key, value in modes.items():
-        print(f"{key}: {value.title()}")
+    for key, value in modes_for_opens.items():
+        print(f"{key.title()}: {value.title()}")
         sleep(0.25)
 
 def show_result(score, total_questions):
@@ -56,24 +61,42 @@ def get_difficulty():
                        
     return difficulty
 
+# def get_mode():
+#     while True:
+#         loop_modes()
+#         mode = input("Type the mode number (#) for your quiz (or ? for more information): ")
+#         if mode.isdigit():
+#             mode = int(mode)
+#             if mode in modes:
+#                 print(f"Terrific! Mode chosen: {modes[mode].title()}\n")
+#                 sleep(1)
+#                 break
+#             else:
+#                 print("Please enter a valid mode number (#) next time.")
+#         elif mode == "?":
+#             print("\nNormal: questions are organiazed by default in a orden & tells you the correct answer.")
+#             print("Expert: questions are random & it does not tell you the correct answer.\n")
+#             sleep(4)
+#         else:
+#             print("Please enter a mode number or '?' for information.")
+
+#     return mode
+
 def get_mode():
     while True:
         loop_modes()
-        mode = input("Type the mode number (#) for your quiz (or ? for more information): ")
-        if mode.isdigit():
-            mode = int(mode)
-            if mode in modes:
-                print(f"Terrific! Mode chosen: {modes[mode].title()}\n")
-                sleep(1)
-                break
-            else:
-                print("Please enter a valid mode number (#) next time.")
+        mode = input("Type the mode symbol (A or B) for your quiz (otherwise type '?' for more information): ")
+        if mode.lower() in modes_for_opens:
+            mode = str(mode)
+            print(f"Terrific! Mode chosen: {modes_for_opens[mode].title()}\n")
+            sleep(1)
+            break
         elif mode == "?":
-            print("\nNormal: questions are organiazed by default in a orden & tells you the correct answer.")
-            print("Expert: questions are random & it does not tell you the correct answer.\n")
+            print("\nPractice Mode: After answering each question, it TELLS you whenever your answer was correct or incorrect at the moment. Prompts ALL (50+) of the questions that open contains.")
+            print("Simulation Mode: After answering each question, it DOESN'T TELL you whenever your answer was correct or incorrect UNTIL the end. Prompts and randomly selects ONLY 50 questions the open contains.\n")
             sleep(4)
         else:
-            print("Please enter a mode number or '?' for information.")
+            print("Please enter a mode symbol (A or B) or '?' for more information.")
 
     return mode
 
@@ -92,11 +115,11 @@ def main():
 
     if difficulty == 1: # Easy
     # total_questions = 6
-        if mode == 1:
+        if mode == modes_for_opens["a"]:
             sleep(1)
             score = easy_q.normal_questions(0, 0)
             show_result(score, 6)
-        elif mode == 2:
+        elif mode == modes_for_opens["b"]:
             sleep(1)
             score = easy_q.random_questions(0, 0)
             show_result(score, 6)
